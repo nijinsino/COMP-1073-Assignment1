@@ -62,7 +62,7 @@ class StoryMaker {
     document.getElementById("placeBtn").innerText = "Where?";
     document.getElementById("timeBtn").innerText = "When?";
     document.getElementById("moodBtn").innerText = "How?";
-    document.getElementById("storyOutput").innerText = "Your story is going to appear here...";
+    document.getElementById("storyOutput").innerText = "Your story is going to appear in this platform...";
 }
 
 
