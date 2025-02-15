@@ -54,35 +54,4 @@ class StoryMaker {
        
     }
 
-    // it will reset the Story Selection
-    resetStory() {
-        this.selections = { subject: 0, action: 0, place: 0, time: 0, mood: 0 };
-        document.getElementById("subjectBtn").innerText = "Who?";
-        document.getElementById("actionBtn").innerText = "What?";
-        document.getElementById("placeBtn").innerText = "Where?";
-        document.getElementById("timeBtn").innerText = "When?";
-        document.getElementById("moodBtn").innerText = "How?";
-        document.getElementById("storyOutput").innerText = "Your story is going to appear here...";
-    }
-
-
-
-
-    //Event Listeners
-    setupEventListeners() {
-        document.getElementById("subjectBtn").addEventListener("click", () => this.cycleChoice("subject", "subjectBtn", this.subjects));
-        document.getElementById("actionBtn").addEventListener("click", () => this.cycleChoice("action", "actionBtn", this.actions));
-        document.getElementById("placeBtn").addEventListener("click", () => this.cycleChoice("place", "placeBtn", this.places));
-        document.getElementById("timeBtn").addEventListener("click", () => this.cycleChoice("time", "timeBtn", this.times));
-        document.getElementById("moodBtn").addEventListener("click", () => this.cycleChoice("mood", "moodBtn", this.moods));
-
-        document.getElementById("generateStory").addEventListener("click", () => this.generateStory());
-        document.getElementById("randomStory").addEventListener("click", () => this.generateRandomStory());
-        document.getElementById("resetStory").addEventListener("click", () => this.resetStory());
-    }
 }
-
-// this will initialize the storyMaker Class
-document.addEventListener("DOMContentLoaded", () => {
-    new StoryMaker();
-});
